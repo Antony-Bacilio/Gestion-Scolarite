@@ -1,0 +1,128 @@
+object f_gabarit: Tf_gabarit
+  Left = 488
+  Height = 629
+  Top = 273
+  Width = 1362
+  Caption = 'Gestion des Infractions'
+  ClientHeight = 609
+  ClientWidth = 1362
+  Menu = mnu_main
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.6.0.4'
+  object pnl_info: TPanel
+    Left = 0
+    Height = 30
+    Top = 579
+    Width = 1362
+    Align = alBottom
+    Caption = 'message d''information'
+    TabOrder = 0
+  end
+  object pnl_travail: TPanel
+    Left = 412
+    Height = 549
+    Top = 30
+    Width = 950
+    Align = alRight
+    ClientHeight = 549
+    ClientWidth = 950
+    TabOrder = 1
+    OnClick = pnl_travailClick
+    object lbl_bienvenue: TLabel
+      Left = 344
+      Height = 89
+      Top = 48
+      Width = 325
+      Alignment = taRightJustify
+      Caption = 'Bienvenue'
+      Font.Color = clBlue
+      Font.Height = 90
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbl_bienvenue2: TLabel
+      Left = 176
+      Height = 89
+      Top = 232
+      Width = 659
+      Caption = 'dans l''application de'
+      Font.Color = clBlue
+      Font.Height = 90
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 176
+      Height = 89
+      Top = 400
+      Width = 695
+      Caption = 'gestion de la Scolarité'
+      Font.Color = clBlue
+      Font.Height = 90
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object pnl_selection: TPanel
+    Left = 0
+    Height = 549
+    Top = 30
+    Width = 412
+    Align = alClient
+    TabOrder = 2
+    OnClick = pnl_selectionClick
+  end
+  object pnl_ariane: TPanel
+    Left = 0
+    Height = 30
+    Top = 0
+    Width = 1362
+    Align = alTop
+    Caption = 'fil d''ariane'
+    TabOrder = 3
+  end
+  object mnu_main: TMainMenu
+    left = 24
+    top = 16
+    object item_accueil: TMenuItem
+      Caption = 'Accueil'
+      OnClick = mnu_item_Click
+    end
+    object item_inscrit: TMenuItem
+      Caption = 'Inscrit'
+      object item_liste_i: TMenuItem
+        Caption = 'Liste'
+        OnClick = mnu_item_Click
+      end
+      object item_archive: TMenuItem
+        Caption = 'Archive'
+        object item_archiven1: TMenuItem
+          Caption = 'archive N-1'
+          OnClick = mnu_item_Click
+        end
+        object item_archiven2: TMenuItem
+          Caption = 'archive N-2'
+          OnClick = mnu_item_Click
+        end
+      end
+    end
+    object item_filiere: TMenuItem
+      Caption = 'Filière'
+      object item_liste_ii: TMenuItem
+        Caption = 'Liste'
+        OnClick = mnu_item_Click
+      end
+      object item_statistiques: TMenuItem
+        Caption = 'Statistiques'
+      end
+    end
+    object item_quitter: TMenuItem
+      Caption = 'Quitter'
+      OnClick = item_quitterClick
+    end
+  end
+end

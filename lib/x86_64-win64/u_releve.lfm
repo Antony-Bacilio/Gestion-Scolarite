@@ -1,0 +1,69 @@
+inherited f_releve: Tf_releve
+  Left = 908
+  Height = 534
+  Top = 284
+  Width = 707
+  Caption = 'f_releve'
+  ClientHeight = 534
+  ClientWidth = 707
+  OnCreate = FormCreate
+  inherited pnl_titre: TPanel
+    Width = 707
+  end
+  inherited pnl_btn: TPanel
+    Top = 500
+    Width = 707
+    ClientWidth = 707
+    inherited pnl_btn_ligne: TPanel
+      Width = 308
+      ClientWidth = 308
+      inherited btn_line_detail: TSpeedButton
+        Left = 184
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 215
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 277
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 246
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 466
+    Width = 707
+    ClientHeight = 466
+    ClientWidth = 707
+    inherited sg_liste: TStringGrid
+      Height = 466
+      Width = 707
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'UE'
+          Width = 100
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Coef'
+          Width = 100
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Note'
+          Width = 100
+        end>
+      ColWidths = (
+        100
+        100
+        100
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

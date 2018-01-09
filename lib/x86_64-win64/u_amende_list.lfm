@@ -1,0 +1,91 @@
+inherited f_amende_list: Tf_amende_list
+  Left = 982
+  Height = 481
+  Top = 845
+  Width = 710
+  Caption = 'f_amende_list'
+  ClientHeight = 481
+  ClientWidth = 710
+  OnCreate = FormCreate
+  inherited pnl_titre: TPanel
+    Width = 710
+    ClientWidth = 710
+    object lbl_titre: TLabel[0]
+      Left = 0
+      Height = 34
+      Top = 0
+      Width = 113
+      Align = alLeft
+      Caption = 'Délits constatés: '
+      ParentColor = False
+    end
+    object lbl_amende_total: TLabel[1]
+      Left = 113
+      Height = 34
+      Top = 0
+      Width = 70
+      Align = alLeft
+      AutoSize = False
+      Layout = tlCenter
+      ParentColor = False
+    end
+  end
+  inherited pnl_btn: TPanel
+    Top = 447
+    Width = 710
+    ClientWidth = 710
+    inherited pnl_btn_ligne: TPanel
+      Width = 311
+      ClientWidth = 311
+      inherited btn_line_detail: TSpeedButton
+        Left = 187
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 218
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 280
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 249
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 413
+    Width = 710
+    ClientHeight = 413
+    ClientWidth = 710
+    inherited sg_liste: TStringGrid
+      Height = 413
+      Width = 710
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'n°'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'nature'
+          Width = 260
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'tarif'
+          Width = 60
+        end>
+      ColWidths = (
+        50
+        260
+        60
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

@@ -1,0 +1,383 @@
+object f_detail_etudiant: Tf_detail_etudiant
+  Left = 1049
+  Height = 841
+  Top = 486
+  Width = 1093
+  Caption = 'f_detail_etudiant'
+  ClientHeight = 841
+  ClientWidth = 1093
+  ParentFont = True
+  LCLVersion = '1.6.0.4'
+  object pnl_titre: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 1093
+    Align = alTop
+    TabOrder = 0
+  end
+  object pnl_btn: TPanel
+    Left = 0
+    Height = 50
+    Top = 791
+    Width = 1093
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 1093
+    TabOrder = 1
+    object btn_retour: TButton
+      Left = 200
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Retour liste'
+      OnClick = btn_retourClick
+      TabOrder = 0
+    end
+    object btn_valider: TButton
+      Left = 462
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Valider'
+      OnClick = btn_validerClick
+      TabOrder = 1
+    end
+    object btn_annuler: TButton
+      Left = 600
+      Height = 25
+      Top = 16
+      Width = 75
+      Caption = 'Annuler'
+      OnClick = btn_annulerClick
+      TabOrder = 2
+    end
+  end
+  object pnl_detail: TPanel
+    Left = 0
+    Height = 741
+    Top = 50
+    Width = 1093
+    Align = alClient
+    ClientHeight = 741
+    ClientWidth = 1093
+    TabOrder = 2
+    object pnl_ident: TPanel
+      Left = 1
+      Height = 50
+      Top = 1
+      Width = 1091
+      Align = alTop
+      ClientHeight = 50
+      ClientWidth = 1091
+      TabOrder = 0
+      OnClick = pnl_identClick
+      object lbl_ident: TLabel
+        Left = 56
+        Height = 15
+        Top = 16
+        Width = 140
+        AutoSize = False
+        Caption = 'IDENTIFICATION'
+        ParentColor = False
+      end
+      object lbl_num: TLabel
+        Left = 293
+        Height = 15
+        Top = 16
+        Width = 42
+        Caption = 'numero'
+        ParentColor = False
+      end
+      object lbl_date: TLabel
+        Left = 584
+        Height = 15
+        Top = 16
+        Width = 23
+        Caption = 'date'
+        ParentColor = False
+      end
+      object lbl_num_erreur: TLabel
+        Left = 528
+        Height = 1
+        Top = 16
+        Width = 1
+        ParentColor = False
+      end
+      object edt_num: TEdit
+        Left = 352
+        Height = 23
+        Top = 16
+        Width = 80
+        AutoSize = False
+        CharCase = ecUppercase
+        OnChange = edt_numChange
+        OnExit = edt_numExit
+        TabOrder = 0
+      end
+      object edt_dt: TDateTimePicker
+        Left = 632
+        Height = 23
+        Top = 16
+        Width = 100
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        AutoSize = False
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 42821
+        Time = 0.498733032407472
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+    end
+    object pnl_vehicule: TPanel
+      Left = 1
+      Height = 50
+      Top = 51
+      Width = 1091
+      Align = alTop
+      ClientHeight = 50
+      ClientWidth = 1091
+      TabOrder = 1
+      object lbl_vehicule: TLabel
+        Left = 56
+        Height = 15
+        Top = 16
+        Width = 140
+        AutoSize = False
+        Caption = 'VEHICULE'
+        ParentColor = False
+      end
+      object lbl_immat: TLabel
+        Left = 296
+        Height = 15
+        Top = 16
+        Width = 85
+        Caption = 'immatriculation'
+        ParentColor = False
+      end
+      object lbl_proprio: TLabel
+        Left = 512
+        Height = 15
+        Top = 16
+        Width = 61
+        Caption = 'propriétaire'
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lbl_immat_erreur: TLabel
+        Left = 664
+        Height = 1
+        Top = 16
+        Width = 1
+        ParentColor = False
+      end
+      object edt_immat: TEdit
+        Left = 392
+        Height = 23
+        Top = 16
+        Width = 100
+        AutoSize = False
+        CharCase = ecUppercase
+        OnExit = edt_immatExit
+        TabOrder = 0
+      end
+      object mmo_vehicule: TMemo
+        Left = 592
+        Height = 90
+        Top = 0
+        Width = 150
+        Lines.Strings = (
+          'mmo_vehicule'
+        )
+        TabOrder = 1
+      end
+      object mmo_proprio: TMemo
+        Left = 752
+        Height = 90
+        Top = 0
+        Width = 150
+        Lines.Strings = (
+          'mmo_proprio'
+        )
+        TabOrder = 2
+      end
+    end
+    object pnl_conducteur: TPanel
+      Left = 1
+      Height = 50
+      Top = 101
+      Width = 1091
+      Align = alTop
+      ClientHeight = 50
+      ClientWidth = 1091
+      TabOrder = 2
+      object lbl_conducteur: TLabel
+        Left = 56
+        Height = 15
+        Top = 16
+        Width = 140
+        AutoSize = False
+        Caption = 'CONDUCTEUR'
+        ParentColor = False
+      end
+      object lbl_permis: TLabel
+        Left = 296
+        Height = 15
+        Top = 16
+        Width = 51
+        Caption = 'n° permis'
+        ParentColor = False
+      end
+      object lbl_permis_erreur: TLabel
+        Left = 517
+        Height = 15
+        Top = 16
+        Width = 90
+        Caption = 'lbl_permis_erreur'
+        ParentColor = False
+      end
+      object edt_permis: TEdit
+        Left = 368
+        Height = 23
+        Top = 16
+        Width = 80
+        CharCase = ecUppercase
+        OnExit = edt_permisExit
+        TabOrder = 0
+      end
+      object mmo_conducteur: TMemo
+        Left = 681
+        Height = 90
+        Top = 13
+        Width = 150
+        Lines.Strings = (
+          'mmo_conducteur'
+        )
+        TabOrder = 1
+      end
+    end
+    object pnl_commune: TPanel
+      Left = 1
+      Height = 50
+      Top = 151
+      Width = 1091
+      Align = alTop
+      ClientHeight = 50
+      ClientWidth = 1091
+      TabOrder = 3
+      object lbl_commune: TLabel
+        Left = 56
+        Height = 15
+        Top = 16
+        Width = 140
+        AutoSize = False
+        Caption = 'COMMUNE'
+        ParentColor = False
+      end
+      object lbl_nocom: TLabel
+        Left = 296
+        Height = 15
+        Top = 17
+        Width = 42
+        Caption = 'n°INSEE'
+        ParentColor = False
+      end
+      object lbl_nocom_erreur: TLabel
+        Left = 512
+        Height = 1
+        Top = 19
+        Width = 1
+        ParentColor = False
+      end
+      object edt_nocom: TEdit
+        Left = 368
+        Height = 23
+        Top = 16
+        Width = 100
+        AutoSize = False
+        AutoSelect = False
+        CharCase = ecUppercase
+        OnExit = edt_nocomExit
+        TabOrder = 0
+      end
+      object mmo_commune: TMemo
+        Left = 535
+        Height = 90
+        Top = 14
+        Width = 150
+        Lines.Strings = (
+          'mmo_commune'
+        )
+        TabOrder = 1
+      end
+    end
+    object pnl_amende: TPanel
+      Left = 1
+      Height = 539
+      Top = 201
+      Width = 1091
+      Align = alClient
+      ClientHeight = 539
+      ClientWidth = 1091
+      TabOrder = 4
+      object pnl_amende_titre: TPanel
+        Left = 1
+        Height = 50
+        Top = 1
+        Width = 1089
+        Align = alTop
+        ClientHeight = 50
+        ClientWidth = 1089
+        TabOrder = 0
+        object lbl_amende: TLabel
+          Left = 1
+          Height = 48
+          Top = 1
+          Width = 70
+          Align = alLeft
+          AutoSize = False
+          Caption = 'AMENDE'
+          ParentColor = False
+        end
+        object lbl_amende_erreur: TLabel
+          Left = 81
+          Height = 48
+          Top = 1
+          Width = 1
+          Align = alLeft
+          BorderSpacing.Left = 10
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object pnl_amende_list: TPanel
+        Left = 1
+        Height = 487
+        Top = 51
+        Width = 410
+        Align = alLeft
+        TabOrder = 1
+        OnClick = pnl_amende_listClick
+      end
+      object pnl_amende_ajout: TPanel
+        Left = 411
+        Height = 487
+        Top = 51
+        Width = 679
+        Align = alClient
+        TabOrder = 2
+      end
+    end
+  end
+end

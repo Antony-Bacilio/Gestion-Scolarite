@@ -1,0 +1,110 @@
+inherited f_releve_list: Tf_releve_list
+  Left = 551
+  Height = 551
+  Top = 409
+  Width = 710
+  Caption = 'f_releve_list'
+  ClientHeight = 551
+  ClientWidth = 710
+  OnCreate = FormCreate
+  inherited pnl_titre: TPanel
+    Width = 710
+    ClientWidth = 710
+    object lbl_titre: TLabel[0]
+      Left = 0
+      Height = 34
+      Top = 0
+      Width = 247
+      Align = alLeft
+      Caption = 'Relevé de notes - Moyenne étudiant : '
+      ParentColor = False
+    end
+    object lbl_moy_etud: TLabel[1]
+      Left = 247
+      Height = 34
+      Top = 0
+      Width = 62
+      Align = alLeft
+      AutoSize = False
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object lbl_titre2: TLabel[2]
+      Left = 309
+      Height = 34
+      Top = 0
+      Width = 126
+      Align = alLeft
+      Caption = ' - Moyenne filière : '
+      ParentColor = False
+    end
+    object lbl_moy_fil: TLabel[3]
+      Left = 435
+      Height = 34
+      Top = 0
+      Width = 77
+      Align = alLeft
+      AutoSize = False
+      ParentColor = False
+    end
+  end
+  inherited pnl_btn: TPanel
+    Top = 517
+    Width = 710
+    ClientWidth = 710
+    inherited pnl_btn_page: TPanel
+      Visible = False
+    end
+    inherited pnl_btn_ligne: TPanel
+      Width = 311
+      ClientWidth = 311
+      inherited btn_line_detail: TSpeedButton
+        Left = 187
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 218
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 280
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 249
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 483
+    Width = 710
+    ClientHeight = 483
+    ClientWidth = 710
+    inherited sg_liste: TStringGrid
+      Height = 483
+      Width = 710
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = '1'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = '2'
+          Width = 260
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = '3'
+          Width = 60
+        end>
+      ColWidths = (
+        50
+        260
+        60
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

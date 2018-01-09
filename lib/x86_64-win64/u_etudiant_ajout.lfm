@@ -1,0 +1,72 @@
+object f_etudiant_ajout: Tf_etudiant_ajout
+  Left = 1155
+  Height = 406
+  Top = 681
+  Width = 673
+  Caption = 'f_etudiant_ajout'
+  ClientHeight = 406
+  ClientWidth = 673
+  LCLVersion = '1.6.0.4'
+  object pnl_titre: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 673
+    Align = alTop
+    Caption = 'Ajout d''un étudiant'
+    TabOrder = 0
+  end
+  object pnl_detail: TPanel
+    Left = 0
+    Height = 356
+    Top = 50
+    Width = 673
+    Align = alClient
+    ClientHeight = 356
+    ClientWidth = 673
+    TabOrder = 1
+    object lbl_delit_num: TLabel
+      Left = 16
+      Height = 15
+      Top = 16
+      Width = 42
+      Caption = 'numéro'
+      ParentColor = False
+    end
+    object cbo_delit_num: TComboBox
+      Left = 96
+      Height = 21
+      Top = 16
+      Width = 100
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      ItemHeight = 15
+      OnChange = cbo_delit_numChange
+      OnCloseUp = cbo_delit_numCloseUp
+      Style = csOwnerDrawFixed
+      TabOrder = 0
+      Text = 'cbo_delit_num'
+    end
+    object lbl_delit_nature: TLabel
+      Left = 16
+      Height = 15
+      Top = 60
+      Width = 34
+      Caption = 'nature'
+      ParentColor = False
+    end
+    object cbo_delit_nature: TComboBox
+      Left = 96
+      Height = 23
+      Top = 64
+      Width = 100
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      ItemHeight = 15
+      OnChange = cbo_delit_natureChange
+      OnCloseUp = cbo_delit_natureCloseUp
+      Style = csDropDownList
+      TabOrder = 1
+    end
+  end
+end
